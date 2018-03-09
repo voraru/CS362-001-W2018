@@ -1,0 +1,12 @@
+Errors found:
+
+Appt.java
+
+1. There was an error found in the getStartHour() function. Instead of the function returning the startHour of the appointment class, which in this case was intended to be 21, it returns the startDay, which was 15. 
+
+
+2. There was an error found in the setStartDay() method. Instead of the startDay value being set, the startMonth value was set. This results in an incorrect return value from the getStartDay() method. 
+
+TimeTable.java
+
+3. There was an error in the getApptRange() method. Instead of incrementing daysDifference with ++, it was decremented with —-. As a result, the index was -284 instead of the actual difference in days, which should have been 284.
