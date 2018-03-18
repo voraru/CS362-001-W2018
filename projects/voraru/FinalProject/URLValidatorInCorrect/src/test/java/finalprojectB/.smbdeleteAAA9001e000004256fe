@@ -1,0 +1,114 @@
+
+package finalprojectB;
+
+import junit.framework.TestCase;
+
+//You can use this as a skeleton for your 3 different test approach
+//It is an optional to use this file, you can generate your own test file(s) to test the target function!
+// Again, it is up to you to use this file or not!
+
+
+public class UrlValidatorTest extends TestCase {
+ 	
+	UrlValidator urlVal = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+	//UrlValidator urlVal = new UrlValidator();
+	//UrlValidator urlVal = new UrlValidator();
+
+
+   public UrlValidatorTest(String testName) {
+      super(testName);
+   }
+
+   /************** MANUAL TESTING *************/
+   
+   public void testManualTest()
+   {
+		//You can use this function to implement your manual testing
+   		assertTrue(urlVal.isValidScheme("https"));
+   		//assertTrue(urlVal.isValidAuthority("www.google.com"));
+   		//assertTrue(urlVal.isValidPort(":80"));
+   		assertTrue(urlVal.isValidPath("/test1"));
+   		assertTrue(urlVal.isValidQuery("?action=view"));
+   		assertFalse(urlVal.isValid("http://www.google.com/"));
+		
+		//assertNotNull(urlVal);
+		//assertTrue(urlVal.isValid("http://www.google.com/")); // Tests a commonly used website with http protocol
+		/*assertTrue(urlVal.isValid("https://www.facebook.com")); // Tests a commonly used website with https protocol
+		assertTrue(urlVal.isValid("www.instragram.com")); // Tests a website with no hyper text transfer protocol
+		assertFalse(urlVal.isValid("xxx.gg.123")); // Tests a website without an authority
+		assertFalse(urlVal.isValid("file://www.aol.com")); // Tests a URL with file URL scheme
+		assertFalse(urlVal.isValid("abcdefghijkl;")); // Tests a URL with garbage*/
+	   
+   }
+
+    /************** PARTITION TESTING *************/
+   
+   
+   public void testSchemePartition()
+   {
+
+	 // Valid tests - keeps everything except scheme constant unless protocol requires otherwise
+   	/*assertTrue(urlVal.isValid("http://www.google.com"));
+   	assertTrue(urlVal.isValid("https://www.google.com"));
+	assertTrue(urlVal.isValid("ftp://www.google.com"));
+	assertTrue(urlVal.isValid("h3p://www.google.com"));
+	assertTrue(urlVal.isValid("www.google.com"));
+
+   	 // Invalid tests
+	assertFalse(urlVal.isValid("://google.com"));
+	assertFalse(urlVal.isValid("http/google.com"));
+	assertFalse(urlVal.isValid("://google.com"));
+	assertFalse(urlVal.isValid("3ht://google.com"));*/
+   }
+
+   public void testAuthorityPartition()
+   {
+
+	 // Valid tests
+
+   	 // Invalid tests
+
+
+   }
+
+   public void testPortPartition()
+   {
+
+	 // Valid tests
+
+   	 // Invalid tests
+
+
+   }
+
+   public void testPathPartition()
+   {
+
+	 // Valid tests
+
+   	 // Invalid tests
+
+
+   }
+
+   public void testUrlQueryPartition()
+   {
+
+	 // Valid tests
+
+   	 // Invalid tests
+
+
+   }
+   
+
+   
+   public void testIsValid()
+   {
+	   //You can use this function for programming based testing
+
+   }
+   
+
+
+}
